@@ -1,8 +1,9 @@
-function [x_rec] = approxCircDouce(h,y,alpha)
-%APPROXCIRCDOUCE Summary of this function goes here
-%   Detailed explanation goes here
+function [x_rec] = approxCircDouce(alpha,h,y,d)
+%APPROXCIRCDOUCE h est un filtre 1D, y un signal 1D, x_rec est la déconvolution
+%par la méthode d'aproximation circulante de la matrice de Toeplitz et un
+%critère de régularisation/douceur avec alpha et d
     H = fft(h,length(y));
-    D = fft([1; -1],length(y));
+    D = fft(d,length(y));
     H2 = H .* conj(H);
     D2 = D .* conj(D);
     GMCR = conj(H) ./ (H2 + alpha * D2);

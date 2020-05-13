@@ -1,5 +1,6 @@
 function [H,conditionnement] = filtToToeplitzCirc(h,N_x)
-%FILTTOTOEPLITZ Summary of this function goes here
+%FILTTOTOEPLITZ donne l'approximation circulante de la matrice de toeplitz associé au filtre h ainsi que
+%son conditionnement dans le cas carré.
     %%%Construction de la matrice de Toeplitz associée
     N_h = length(h);
     N_y = N_x;

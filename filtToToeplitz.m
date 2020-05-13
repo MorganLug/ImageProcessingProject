@@ -1,5 +1,6 @@
 function [H,conditionnement] = filtToToeplitz(h,N_x)
-%FILTTOTOEPLITZ Summary of this function goes here
+%FILTTOTOEPLITZ donne la matrice de toeplitz associé au filtre h ainsi que
+%son conditionnement dans le cas carré.
     %%%Construction de la matrice de Toeplitz associée
     N_h = length(h);
     N_y = N_x;
