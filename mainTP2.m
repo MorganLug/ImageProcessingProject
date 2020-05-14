@@ -16,4 +16,4 @@ alpha = 0.01;
 x_rec=approxCircDouce2(alpha,h_moy,y,d);
 figure(3);imagesc(x_rec); colormap gray; colorbar;
 
-signal2Dto1DViz({im,x_rec}, "l", 43, ["Image originale", "Image reconstituée"])
+signal2Dto1DViz({normalizeImg(im),normalizeImg(x_rec)}, "l", 43, ["Image originale", "Image reconstituée"])
