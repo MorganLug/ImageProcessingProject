@@ -3,7 +3,7 @@ function [xsol] = optimize(x0,h,y,alpha)
 %   Detailed explanation goes here
 
     options = optimoptions("fminunc");
-    options = optimoptions(options,'Display','iter','MaxFunctionEvaluations',1000,'StepTolerance',1e-10,'SpecifyObjectiveGradient',false,'CheckGradients',true);
+    options = optimoptions(options,'Display','iter','MaxIterations',10,'StepTolerance',1e-10,'SpecifyObjectiveGradient',false,'CheckGradients',true);
 
     % Run optimization solver
     xsol = fminunc(@(x)criteria(x,h,y,alpha),x0,options);
