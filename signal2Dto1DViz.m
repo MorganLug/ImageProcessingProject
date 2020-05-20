@@ -4,9 +4,10 @@ function [] = signal2Dto1DViz(images,dim,value, labels)
     if dim=="l"
         image=images{1};
         figure(10)
+        subplot(2,1,1)
         imagesc(image);colormap gray; colorbar;line([1,size(image,2)],[value,value]);
         x=1:size(image,2);
-        figure(11);
+        subplot(2,1,2)
         hold on
         for i=1:length(images)
             image = images{i};
@@ -21,9 +22,10 @@ function [] = signal2Dto1DViz(images,dim,value, labels)
     else
         image=images{1};
         figure(10)
+        subplot(2,1,1)
         imagesc(image);colormap gray; colorbar;line([value,value],[1,size(image,1)]);
         x=1:size(images{1},1);
-        figure(11);
+        subplot(2,1,2)
         hold on
         for i=1:length(images)
             image = images{i};
