@@ -20,4 +20,4 @@ x_rec=approxCircDouce2(alpha,h_moy,y,d);
 x_sol=optimize2(x0,h_moy,y,alpha,T);
 figure(3);imagesc(x_rec); colormap gray; colorbar;
 figure(4);imagesc(x_sol); colormap gray; colorbar;
-%signal2Dto1DViz({normalizeImg(im),normalizeImg(x_rec),normalizeImg(x_sol)}, "l", 43, ["Image originale", "Image reconstituée", "Image optimisée"])
+signal2Dto1DViz({normalizeImg(im),normalizeImg(x_rec),normalizeImg(x_sol)}, "l", 15, ["Image originale", "Image reconstituée", "Image optimisée"])
