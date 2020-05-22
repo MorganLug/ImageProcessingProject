@@ -1,5 +1,11 @@
-function [result] = phi(signal,index)
+function [result] = phi(signal,index,T)
 %PHI calcule phi
-    result=abs(signal(index+1)-signal(index));
+    result = 0;
+    if index ~=1
+        result = result + sqrt((signal(index)- signal(index-1))^2 + T^2) - T^2;
+    end
+    if (index ~= length(signal))
+        result = result + sqrt((signal(index)- signal(index+1))^2 + T^2) - T^2;
+    end
 end
 
