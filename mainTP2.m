@@ -16,7 +16,7 @@ alpha = 0.001;
 x0= zeros(size(y,1),size(y,2));
 T=std(im(:))/mean(im(:));
 
-x_rec=approxCircDouce2(alpha,h_moy,y,d);
+x_rec=approxCirc2(h_moy,y);
 x_sol=optimize2(x0,h_moy,y,alpha,T);
 figure(3);imagesc(x_rec); colormap gray; colorbar;
 figure(4);imagesc(x_sol); colormap gray; colorbar;

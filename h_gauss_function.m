@@ -16,7 +16,7 @@ Te = 1/fe;		% période d'échantillonnage
 
 
 %t_h=(0:Te:30*Te);
-h=(1/(sigma_h*sqrt(2*pi)))*exp(-(((t_h-mu_h)/(sqrt(2)*sigma_h)).*((t_h-mu_h)/(sqrt(2)*sigma_h))));
+h=(1/(sigma_h*sqrt(2*pi)))*exp(-(((t_h-mu_h)/(sqrt(2)*sigma_h)).*((t_h-mu_h)/(sqrt(2)*sigma_h))))';
 
 %plot(tt,h);
 %xlabel('temps (s)'); ylabel('amplitude'); title('Réponse impulsionnelle h(t)');
