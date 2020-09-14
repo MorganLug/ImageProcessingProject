@@ -1,7 +1,4 @@
 function [xsol] = optimize2(x0,h,y,alpha,T)
-%OPTIMIZE Summary of this function goes here
-%   Detailed explanation goes here
-
     options = optimoptions("fminunc");
     options = optimoptions(options,'Display','iter','MaxIterations',10,'StepTolerance',1e-10,'SpecifyObjectiveGradient',false,'CheckGradients',false);
     xinit=x0(:);

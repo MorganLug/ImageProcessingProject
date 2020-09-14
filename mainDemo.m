@@ -214,10 +214,10 @@ imagesc(ax22,conv2(x_optimNonConv,h,'same'));colormap gray; colorbar;
 title(ax22,"x par optimisation non convexe convolué");
 hold off
 
-EQM_approxCirc = EQM2(x_triang,x_approxCirc)
-EQM_approxCircDouce = EQM2(x_triang,x_approxCircDouce)
-EQM_optim = EQM2(x_triang,x_optim)
-EQM_optimNonConv = EQM2(x_triang,x_optimNonConv)
+EQM_approxCirc2 = EQM2(x_triang,x_approxCirc)
+EQM_approxCircDouce2 = EQM2(x_triang,x_approxCircDouce)
+EQM_optim2 = EQM2(x_triang,x_optim)
+EQM_optimNonConv2 = EQM2(x_triang,x_optimNonConv)
 
 signal2Dto1DViz({normalizeImg(x_triang),normalizeImg(x_approxCirc),normalizeImg(x_approxCircDouce),normalizeImg(x_optim),normalizeImg(x_optimNonConv)}, "l", 15, ["Image originale", "Approximation Circulante", "Approximation Circulante douce", "Optimisation", "Optimisation Non Convexe"])
 
